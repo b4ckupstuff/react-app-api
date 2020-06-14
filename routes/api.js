@@ -21,4 +21,15 @@ router.get('/rate-limit-test', limiter, function(req, res, next) {
     res.send("200 ok");
 });
 
+async function sleep(ms) {
+    return new Promise(resolve => {
+        setTimeout(resolve, ms);
+    });
+}
+
+router.post('/bPMAVm', limiter, async function (req, res, next) {
+    // process req.body => {fullName, dateOfBirth}
+    res.json("result");
+});
+
 module.exports = router;
