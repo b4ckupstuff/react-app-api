@@ -1,0 +1,354 @@
+{
+	"Number": {
+		"0":{
+			"attribute": "",
+			"body": "",
+			"color": "",
+			"creativeCycle": "",
+			"destructiveCycle": "",
+			"direction": "",
+			"disease": "",
+			"element": "",
+			"familyMember": "",
+			"frequency": {
+				"0": "",
+				"1": "",
+				"2": "",
+				"3": "",
+				"4": ""
+			},
+			"image": "",
+			"significance": ""
+		},
+		"1":{
+			"attribute": "",
+			"body": "",
+			"color": "",
+			"creativeCycle": "",
+			"destructiveCycle": "",
+			"direction": "",
+			"disease": "",
+			"element": "",
+			"familyMember": "",
+			"frequency": {
+				"0": "",
+				"1": "",
+				"2": "",
+				"3": "",
+				"4": ""
+			},
+			"image": "",
+			"significance": ""
+		},
+		"2":{
+			"attribute": "",
+			"body": "",
+			"color": "",
+			"creativeCycle": "",
+			"destructiveCycle": "",
+			"direction": "",
+			"disease": "",
+			"element": "",
+			"familyMember": "",
+			"frequency": {
+				"0": "",
+				"1": "",
+				"2": "",
+				"3": "",
+				"4": ""
+			},
+			"image": "",
+			"significance": ""
+		},
+		"3":{
+			"attribute": "",
+			"body": "",
+			"color": "",
+			"creativeCycle": "",
+			"destructiveCycle": "",
+			"direction": "",
+			"disease": "",
+			"element": "",
+			"familyMember": "",
+			"frequency": {
+				"0": "",
+				"1": "",
+				"2": "",
+				"3": "",
+				"4": ""
+			},
+			"image": "",
+			"significance": ""
+		},
+		"4":{
+			"attribute": "",
+			"body": "",
+			"color": "",
+			"creativeCycle": "",
+			"destructiveCycle": "",
+			"direction": "",
+			"disease": "",
+			"element": "",
+			"familyMember": "",
+			"frequency": {
+				"0": "",
+				"1": "",
+				"2": "",
+				"3": "",
+				"4": ""
+			},
+			"image": "",
+			"significance": ""
+		},
+		"5":{
+			"attribute": "",
+			"body": "",
+			"color": "",
+			"creativeCycle": "",
+			"destructiveCycle": "",
+			"direction": "",
+			"disease": "",
+			"element": "",
+			"familyMember": "",
+			"frequency": {
+				"0": "",
+				"1": "",
+				"2": "",
+				"3": "",
+				"4": ""
+			},
+			"image": "",
+			"significance": ""
+		},
+		"6":{
+			"attribute": "",
+			"body": "",
+			"color": "",
+			"creativeCycle": "",
+			"destructiveCycle": "",
+			"direction": "",
+			"disease": "",
+			"element": "",
+			"familyMember": "",
+			"frequency": {
+				"0": "",
+				"1": "",
+				"2": "",
+				"3": "",
+				"4": ""
+			},
+			"image": "",
+			"significance": ""
+		},
+		"7":{
+			"attribute": "",
+			"body": "",
+			"color": "",
+			"creativeCycle": "",
+			"destructiveCycle": "",
+			"direction": "",
+			"disease": "",
+			"element": "",
+			"familyMember": "",
+			"frequency": {
+				"0": "",
+				"1": "",
+				"2": "",
+				"3": "",
+				"4": ""
+			},
+			"image": "",
+			"significance": ""
+		},
+		"8":{
+			"attribute": "",
+			"body": "",
+			"color": "",
+			"creativeCycle": "",
+			"destructiveCycle": "",
+			"direction": "",
+			"disease": "",
+			"element": "",
+			"familyMember": "",
+			"frequency": {
+				"0": "",
+				"1": "",
+				"2": "",
+				"3": "",
+				"4": ""
+			},
+			"image": "",
+			"significance": ""
+		},
+		"9":{
+			"attribute": "",
+			"body": "",
+			"color": "",
+			"creativeCycle": "",
+			"destructiveCycle": "",
+			"direction": "",
+			"disease": "",
+			"element": "",
+			"familyMember": "",
+			"frequency": {
+				"0": "",
+				"1": "",
+				"2": "",
+				"3": "",
+				"4": ""
+			},
+			"image": "",
+			"significance": ""
+		}
+	},
+	"Arrow": {
+		"8-5-2": {
+			"Absent": {
+				"name": "Determination",
+				"description": ""
+			},
+			"Present": {
+				"name": "Frustration",
+				"description": ""
+			}
+		},
+		"4-5-6": {
+			"Absent": {
+				"name": "Emotional Balance",
+				"description": ""
+			},
+			"Present": {
+				"name": "Suspicion",
+				"description": ""
+			}
+		},
+		"3-5-7": {
+			"Absent": {
+				"name": "Sprituality",
+				"description": ""
+			},
+			"Present": {
+				"name": "Lonliness",
+				"description": ""
+			}
+		},
+		"4-9-2": {
+			"Absent": {
+				"name": "Intellect",
+				"description": ""
+			},
+			"Present": {
+				"name": "Poor Memory",
+				"description": ""
+			}
+		},
+		"8-1-6": {
+			"Absent": {
+				"name": "Prosperity",
+				"description": ""
+			},
+			"Present": {
+				"name": "Lossed",
+				"description": ""
+			}
+		},
+		"4-3-8": {
+			"Absent": {
+				"name": "Planner",
+				"description": ""
+			},
+			"Present": {
+				"name": "Confusion",
+				"description": ""
+			}
+		},
+		"9-5-1": {
+			"Absent": {
+				"name": "Will Power",
+				"description": ""
+			},
+			"Present": {
+				"name": "Indecision",
+				"description": ""
+			}
+		},
+		"2-7-6": {
+			"Absent": {
+				"name": "Action",
+				"description": ""
+			},
+			"Present": {
+				"name": "Apathy",
+				"description": ""
+			}
+		}
+	},
+	"Small Arrow": {
+		"1-3": {
+			"Absent": {
+				"name": "",
+				"description": ""
+			},
+			"Present": {
+				"name": "Detail and Deceit",
+				"description": ""
+			}
+		},
+		"3-9": {
+			"Absent": {
+				"name": "",
+				"description": ""
+			},
+			"Present": {
+				"name": "Litigation",
+				"description": ""
+			}
+		},
+		"9-7": {
+			"Absent": {
+				"name": "",
+				"description": ""
+			},
+			"Present": {
+				"name": "Peace of Mind",
+				"description": ""
+			}
+		},
+		"1-7": {
+			"Absent": {
+				"name": "",
+				"description": ""
+			},
+			"Present": {
+				"name": "Science and Sprituality",
+				"description": ""
+			}
+		}
+	},
+	"Plane": {
+		"4-9-2": {
+			"name": "Mental Plane",
+			"description": ""
+		},
+		"3-5-7": {
+			"name": "Emotional Plane",
+			"description": ""
+		},
+		"8-1-6": {
+			"name": "Practical Plane",
+			"description": ""
+		},
+		"4-3-8": {
+			"name": "Thought Plane",
+			"description": ""
+		},
+		"9-5-1": {
+			"name": "Will Plane",
+			"description": ""
+		},
+		"2-7-6": {
+			"name": "Action Plane",
+			"description": ""
+		}
+	}
+}
