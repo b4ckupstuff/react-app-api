@@ -58,4 +58,28 @@ router.get('/levelQuatro/:greatgrandparent/:grandparent/:parent', function (req,
     res.json(Object.keys(result));
 });
 
+router.post('/value', function (req, res) {
+    if(req.body.five) {
+        data[`${req.body.one}`][`${req.body.two}`][`${req.body.three}`][`${req.body.five}`] = req.body.four;
+    } else {
+        data[`${req.body.one}`][`${req.body.two}`][`${req.body.three}`] = req.body.four;
+    }
+    res.send([]).status(200);
+});
+
+router.get('/finalValue/:one/:two/:three/:four', function (req, res) {
+    let result = "";
+    let one = req.params.one;
+    let two = req.params.two;
+    let three = req.params.three;
+    let four = req.params.four;
+    // let five = req.params.five;
+    if(four !== "undefined") {
+        result = data[`${one}`][`${two}`][`${three}`][`${four}`];
+    } else {
+        result = data[`${one}`][`${two}`][`${three}`];
+    }
+    res.json(result);
+});
+
 module.exports = router;

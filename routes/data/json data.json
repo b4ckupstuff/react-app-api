@@ -1,354 +1,354 @@
 {
 	"Number": {
 		"0":{
-			"attribute": "",
-			"body": "",
-			"color": "",
-			"creativeCycle": "",
-			"destructiveCycle": "",
-			"direction": "",
-			"disease": "",
-			"element": "",
-			"familyMember": "",
+			"attribute": "default value",
+			"body": "default value",
+			"color": "default value",
+			"creativeCycle": "default value",
+			"destructiveCycle": "default value",
+			"direction": "default value",
+			"disease": "default value",
+			"element": "default value",
+			"familyMember": "default value",
 			"frequency": {
-				"0": "",
-				"1": "",
-				"2": "",
-				"3": "",
-				"4": ""
+				"0": "default value",
+				"1": "default value",
+				"2": "default value",
+				"3": "default value",
+				"4": "default value"
 			},
-			"image": "",
-			"significance": ""
+			"image": "default value",
+			"significance": "default value"
 		},
 		"1":{
-			"attribute": "",
-			"body": "",
-			"color": "",
-			"creativeCycle": "",
-			"destructiveCycle": "",
-			"direction": "",
-			"disease": "",
-			"element": "",
-			"familyMember": "",
+			"attribute": "default value",
+			"body": "default value",
+			"color": "default value",
+			"creativeCycle": "default value",
+			"destructiveCycle": "default value",
+			"direction": "default value",
+			"disease": "default value",
+			"element": "default value",
+			"familyMember": "default value",
 			"frequency": {
-				"0": "",
-				"1": "",
-				"2": "",
-				"3": "",
-				"4": ""
+				"0": "default value",
+				"1": "default value",
+				"2": "default value",
+				"3": "default value",
+				"4": "default value"
 			},
-			"image": "",
-			"significance": ""
+			"image": "default value",
+			"significance": "default value"
 		},
 		"2":{
-			"attribute": "",
-			"body": "",
-			"color": "",
-			"creativeCycle": "",
-			"destructiveCycle": "",
-			"direction": "",
-			"disease": "",
-			"element": "",
-			"familyMember": "",
+			"attribute": "default value",
+			"body": "default value",
+			"color": "default value",
+			"creativeCycle": "default value",
+			"destructiveCycle": "default value",
+			"direction": "default value",
+			"disease": "default value",
+			"element": "default value",
+			"familyMember": "default value",
 			"frequency": {
-				"0": "",
-				"1": "",
-				"2": "",
-				"3": "",
-				"4": ""
+				"0": "default value",
+				"1": "default value",
+				"2": "default value",
+				"3": "default value",
+				"4": "default value"
 			},
-			"image": "",
-			"significance": ""
+			"image": "default value",
+			"significance": "default value"
 		},
 		"3":{
-			"attribute": "",
-			"body": "",
-			"color": "",
-			"creativeCycle": "",
-			"destructiveCycle": "",
-			"direction": "",
-			"disease": "",
-			"element": "",
-			"familyMember": "",
+			"attribute": "default value",
+			"body": "default value",
+			"color": "default value",
+			"creativeCycle": "default value",
+			"destructiveCycle": "default value",
+			"direction": "default value",
+			"disease": "default value",
+			"element": "default value",
+			"familyMember": "default value",
 			"frequency": {
-				"0": "",
-				"1": "",
-				"2": "",
-				"3": "",
-				"4": ""
+				"0": "default value",
+				"1": "default value",
+				"2": "default value",
+				"3": "default value",
+				"4": "default value"
 			},
-			"image": "",
-			"significance": ""
+			"image": "default value",
+			"significance": "default value"
 		},
 		"4":{
-			"attribute": "",
-			"body": "",
-			"color": "",
-			"creativeCycle": "",
-			"destructiveCycle": "",
-			"direction": "",
-			"disease": "",
-			"element": "",
-			"familyMember": "",
+			"attribute": "default value",
+			"body": "default value",
+			"color": "default value",
+			"creativeCycle": "default value",
+			"destructiveCycle": "default value",
+			"direction": "default value",
+			"disease": "default value",
+			"element": "default value",
+			"familyMember": "default value",
 			"frequency": {
-				"0": "",
-				"1": "",
-				"2": "",
-				"3": "",
-				"4": ""
+				"0": "default value",
+				"1": "default value",
+				"2": "default value",
+				"3": "default value",
+				"4": "default value"
 			},
-			"image": "",
-			"significance": ""
+			"image": "default value",
+			"significance": "default value"
 		},
 		"5":{
-			"attribute": "",
-			"body": "",
-			"color": "",
-			"creativeCycle": "",
-			"destructiveCycle": "",
-			"direction": "",
-			"disease": "",
-			"element": "",
-			"familyMember": "",
+			"attribute": "default value",
+			"body": "default value",
+			"color": "default value",
+			"creativeCycle": "default value",
+			"destructiveCycle": "default value",
+			"direction": "default value",
+			"disease": "default value",
+			"element": "default value",
+			"familyMember": "default value",
 			"frequency": {
-				"0": "",
-				"1": "",
-				"2": "",
-				"3": "",
-				"4": ""
+				"0": "default value",
+				"1": "default value",
+				"2": "default value",
+				"3": "default value",
+				"4": "default value"
 			},
-			"image": "",
-			"significance": ""
+			"image": "default value",
+			"significance": "default value"
 		},
 		"6":{
-			"attribute": "",
-			"body": "",
-			"color": "",
-			"creativeCycle": "",
-			"destructiveCycle": "",
-			"direction": "",
-			"disease": "",
-			"element": "",
-			"familyMember": "",
+			"attribute": "default value",
+			"body": "default value",
+			"color": "default value",
+			"creativeCycle": "default value",
+			"destructiveCycle": "default value",
+			"direction": "default value",
+			"disease": "default value",
+			"element": "default value",
+			"familyMember": "default value",
 			"frequency": {
-				"0": "",
-				"1": "",
-				"2": "",
-				"3": "",
-				"4": ""
+				"0": "default value",
+				"1": "default value",
+				"2": "default value",
+				"3": "default value",
+				"4": "default value"
 			},
-			"image": "",
-			"significance": ""
+			"image": "default value",
+			"significance": "default value"
 		},
 		"7":{
-			"attribute": "",
-			"body": "",
-			"color": "",
-			"creativeCycle": "",
-			"destructiveCycle": "",
-			"direction": "",
-			"disease": "",
-			"element": "",
-			"familyMember": "",
+			"attribute": "default value",
+			"body": "default value",
+			"color": "default value",
+			"creativeCycle": "default value",
+			"destructiveCycle": "default value",
+			"direction": "default value",
+			"disease": "default value",
+			"element": "default value",
+			"familyMember": "default value",
 			"frequency": {
-				"0": "",
-				"1": "",
-				"2": "",
-				"3": "",
-				"4": ""
+				"0": "default value",
+				"1": "default value",
+				"2": "default value",
+				"3": "default value",
+				"4": "default value"
 			},
-			"image": "",
-			"significance": ""
+			"image": "default value",
+			"significance": "default value"
 		},
 		"8":{
-			"attribute": "",
-			"body": "",
-			"color": "",
-			"creativeCycle": "",
-			"destructiveCycle": "",
-			"direction": "",
-			"disease": "",
-			"element": "",
-			"familyMember": "",
+			"attribute": "default value",
+			"body": "default value",
+			"color": "default value",
+			"creativeCycle": "default value",
+			"destructiveCycle": "default value",
+			"direction": "default value",
+			"disease": "default value",
+			"element": "default value",
+			"familyMember": "default value",
 			"frequency": {
-				"0": "",
-				"1": "",
-				"2": "",
-				"3": "",
-				"4": ""
+				"0": "default value",
+				"1": "default value",
+				"2": "default value",
+				"3": "default value",
+				"4": "default value"
 			},
-			"image": "",
-			"significance": ""
+			"image": "default value",
+			"significance": "default value"
 		},
 		"9":{
-			"attribute": "",
-			"body": "",
-			"color": "",
-			"creativeCycle": "",
-			"destructiveCycle": "",
-			"direction": "",
-			"disease": "",
-			"element": "",
-			"familyMember": "",
+			"attribute": "default value",
+			"body": "default value",
+			"color": "default value",
+			"creativeCycle": "default value",
+			"destructiveCycle": "default value",
+			"direction": "default value",
+			"disease": "default value",
+			"element": "default value",
+			"familyMember": "default value",
 			"frequency": {
-				"0": "",
-				"1": "",
-				"2": "",
-				"3": "",
-				"4": ""
+				"0": "default value",
+				"1": "default value",
+				"2": "default value",
+				"3": "default value",
+				"4": "default value"
 			},
-			"image": "",
-			"significance": ""
+			"image": "default value",
+			"significance": "default value"
 		}
 	},
 	"Arrow": {
 		"8-5-2": {
 			"Absent": {
 				"name": "Determination",
-				"description": ""
+				"description": "default value"
 			},
 			"Present": {
 				"name": "Frustration",
-				"description": ""
+				"description": "default value"
 			}
 		},
 		"4-5-6": {
 			"Absent": {
 				"name": "Emotional Balance",
-				"description": ""
+				"description": "default value"
 			},
 			"Present": {
 				"name": "Suspicion",
-				"description": ""
+				"description": "default value"
 			}
 		},
 		"3-5-7": {
 			"Absent": {
 				"name": "Sprituality",
-				"description": ""
+				"description": "default value"
 			},
 			"Present": {
 				"name": "Lonliness",
-				"description": ""
+				"description": "default value"
 			}
 		},
 		"4-9-2": {
 			"Absent": {
 				"name": "Intellect",
-				"description": ""
+				"description": "default value"
 			},
 			"Present": {
 				"name": "Poor Memory",
-				"description": ""
+				"description": "default value"
 			}
 		},
 		"8-1-6": {
 			"Absent": {
 				"name": "Prosperity",
-				"description": ""
+				"description": "default value"
 			},
 			"Present": {
 				"name": "Lossed",
-				"description": ""
+				"description": "default value"
 			}
 		},
 		"4-3-8": {
 			"Absent": {
 				"name": "Planner",
-				"description": ""
+				"description": "default value"
 			},
 			"Present": {
 				"name": "Confusion",
-				"description": ""
+				"description": "default value"
 			}
 		},
 		"9-5-1": {
 			"Absent": {
 				"name": "Will Power",
-				"description": ""
+				"description": "default value"
 			},
 			"Present": {
 				"name": "Indecision",
-				"description": ""
+				"description": "default value"
 			}
 		},
 		"2-7-6": {
 			"Absent": {
 				"name": "Action",
-				"description": ""
+				"description": "default value"
 			},
 			"Present": {
 				"name": "Apathy",
-				"description": ""
+				"description": "default value"
 			}
 		}
 	},
 	"Small Arrow": {
 		"1-3": {
 			"Absent": {
-				"name": "",
-				"description": ""
+				"name": "default value",
+				"description": "default value"
 			},
 			"Present": {
 				"name": "Detail and Deceit",
-				"description": ""
+				"description": "default value"
 			}
 		},
 		"3-9": {
 			"Absent": {
-				"name": "",
-				"description": ""
+				"name": "default value",
+				"description": "default value"
 			},
 			"Present": {
 				"name": "Litigation",
-				"description": ""
+				"description": "default value"
 			}
 		},
 		"9-7": {
 			"Absent": {
-				"name": "",
-				"description": ""
+				"name": "default value",
+				"description": "default value"
 			},
 			"Present": {
 				"name": "Peace of Mind",
-				"description": ""
+				"description": "default value"
 			}
 		},
 		"1-7": {
 			"Absent": {
-				"name": "",
-				"description": ""
+				"name": "default value",
+				"description": "default value"
 			},
 			"Present": {
 				"name": "Science and Sprituality",
-				"description": ""
+				"description": "default value"
 			}
 		}
 	},
 	"Plane": {
 		"4-9-2": {
 			"name": "Mental Plane",
-			"description": ""
+			"description": "default value"
 		},
 		"3-5-7": {
 			"name": "Emotional Plane",
-			"description": ""
+			"description": "default value"
 		},
 		"8-1-6": {
 			"name": "Practical Plane",
-			"description": ""
+			"description": "default value"
 		},
 		"4-3-8": {
 			"name": "Thought Plane",
-			"description": ""
+			"description": "default value"
 		},
 		"9-5-1": {
 			"name": "Will Plane",
-			"description": ""
+			"description": "default value"
 		},
 		"2-7-6": {
 			"name": "Action Plane",
-			"description": ""
+			"description": "default value"
 		}
 	}
 }
