@@ -46,7 +46,7 @@ router.get('/levelDuos/:parent', function (req, res) {
 });
 
 router.get('/levelTres/:grandparent/:parent', function (req, res) {
-    res.json(Object.keys(data[req.params.grandparent][req.params.parent]));
+    res.json(data[req.params.grandparent][req.params.parent]);
 });
 
 router.get('/levelQuatro/:greatgrandparent/:grandparent/:parent', function (req, res) {
