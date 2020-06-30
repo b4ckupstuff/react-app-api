@@ -28,6 +28,13 @@ async function sleep(ms) {
     });
 }
 
+router.get('/adminData/number', function (req, res) {
+    let returnObj = {};
+    returnObj.headers = Object.keys(data["Number"]["0"]).filter(e => e !== "frequency");
+    returnObj.data = data["Number"];
+    res.json(returnObj);
+});
+
 router.post('/bPMAVm', limiter, async function (req, res, next) {
     // process req.body => {fullName, dateOfBirth}
     res.json("result");
