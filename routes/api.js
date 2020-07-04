@@ -31,7 +31,6 @@ async function sleep(ms) {
 router.get('/adminData/number', function (req, res) {
     let returnObj = {};
     returnObj.headers = Object.keys(data["Number"]["0"]).filter(e => e !== "frequency");
-    returnObj.headers.unshift("Number");
     let tempData = [];
     Object.keys(data["Number"]).map(e => {
         let obj = data["Number"][e];
@@ -41,6 +40,7 @@ router.get('/adminData/number', function (req, res) {
         tempData.push(temp);
     });
     returnObj.data = tempData;
+    returnObj.headers.unshift("Number");
     res.json(returnObj);
 });
 
