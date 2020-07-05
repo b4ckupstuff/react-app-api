@@ -1,5 +1,25 @@
 {
 	"Number": {
+		"dummy":{
+			"attribute": "default value",
+			"body": "default value",
+			"color": "default value",
+			"creativeCycle": "default value",
+			"destructiveCycle": "default value",
+			"direction": "default value",
+			"disease": "default value",
+			"element": "default value",
+			"familyMember": "default value",
+			"frequency": {
+				"0": "default value",
+				"1": "default value",
+				"2": "default value",
+				"3": "default value",
+				"4": "default value"
+			},
+			"image": "default value",
+			"significance": "default value"
+		},
 		"0":{
 			"attribute": "default value",
 			"body": "default value",
