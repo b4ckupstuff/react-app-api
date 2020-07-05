@@ -30,9 +30,10 @@ async function sleep(ms) {
 
 router.get('/adminData/number', function (req, res) {
     let returnObj = {};
-    returnObj.headers = Object.keys(data["Number"]["0"]).filter(e => e !== "frequency");
+    returnObj.headers = Object.keys(data["Number"]["dummy"]).filter(e => e !== "frequency");
     let tempData = [];
     Object.keys(data["Number"]).map(e => {
+        if(e === "dummy") return;
         let obj = data["Number"][e];
         let temp = [];
         temp.push(e);
