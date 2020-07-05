@@ -44,6 +44,12 @@ router.get('/adminData/number', function (req, res) {
     res.json(returnObj);
 });
 
+router.get('/adminData/:grandparent', function (req, res) {
+    let temp = data[req.params.grandparent];
+    if(temp["frequency"]) delete temp["frequency"];
+    res.json(Object.keys(temp));
+});
+
 router.get('/adminData/:grandparent/:parent', function (req, res) {
     let temp = data[req.params.grandparent][req.params.parent];
     if(temp["frequency"]) delete temp["frequency"];
