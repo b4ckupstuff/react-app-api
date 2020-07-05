@@ -44,6 +44,12 @@ router.get('/adminData/number', function (req, res) {
     res.json(returnObj);
 });
 
+router.get('/adminData/data', function (req, res) {
+    let temp = data[req.params.grandparent][req.params.parent];
+    if(temp["frequency"]) delete temp["frequency"];
+    res.json(temp);
+});
+
 router.post('/bPMAVm', limiter, async function (req, res, next) {
     // process req.body => {fullName, dateOfBirth}
     res.json("result");
