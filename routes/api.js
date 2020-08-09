@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const rateLimit = require("express-rate-limit");
 let data = require('./data/json data');
+let calculations = require('./helpers/calculations');
 
 const requestHashKey = (req) => {
     return req.headers['x-forwarded-for'];
@@ -59,7 +60,8 @@ router.get('/adminData/:grandparent/:parent', function (req, res) {
 
 router.post('/bPMAVm', limiter, async function (req, res, next) {
     // process req.body => {fullName, dateOfBirth}
-    res.json("result");
+    let response = calculations.createFullResult(req.body.fullName, req.body.dateOfBirth);
+    res.json(response);
 });
 
 router.get('/giveMeData', function (req, res) {
