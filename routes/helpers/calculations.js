@@ -36,7 +36,7 @@ function createCoreResult(fullName, dateOfBirth) {
     let dateOfBirthArr = dateOfBirth.split("-");
     let year = dateOfBirthArr[0], month = dateOfBirthArr[1], day = dateOfBirthArr[2];
     let yearSum = reduceToSum(year), monthSum = reduceToSum(month), daySum = reduceToSum(day);
-    result.dateOfBirth.value = yearSum;
+    result.dateOfBirth.value = daySum;
     result.lifePath.value = reduceToSum(yearSum + monthSum + daySum);
     let resObj = calculateExpressionAndSoulUrgeResult(fullName);
     result.expression.value = resObj.expression;
@@ -89,11 +89,36 @@ function createIntensityResult(fullName, dateOfBirth) {
     return result;
 }
 
+// console.log(createYearlyResult("", "1974-08-10"));
+
 function createYearlyResult(fullName, dateOfBirth) {
     let result = [];
     let dateOfBirthArr = dateOfBirth.split("-");
-    let year = parseInt(dateOfBirthArr[0]), month = parseInt(dateOfBirthArr[1]), day = parseInt(dateOfBirthArr[2]);
-    for(let i = year; i < year + 101; i++) {
+    // let year = parseInt(dateOfBirthArr[0]), month = parseInt(dateOfBirthArr[1]), day = parseInt(dateOfBirthArr[2]);
+    let year = (dateOfBirthArr[0]), month = (dateOfBirthArr[1]), day = (dateOfBirthArr[2]);
+    let yearInt = parseInt(year);
+    let yearSum = reduceToSum(year), monthSum = reduceToSum(month), daySum = reduceToSum(day);
+    let lifePath = parseInt(reduceToSum(yearSum + monthSum + daySum));
+    let p1 = reduceToSum(parseInt(daySum) + parseInt(monthSum)), ageOfP1 = 36 - lifePath;
+    let p2 = reduceToSum(parseInt(daySum) + parseInt(yearSum)), ageOfP2 = ageOfP1 - 9;
+    let p3 = reduceToSum(p1 + p2), ageOfP3 = ageOfP2 - 9;
+    let p4 = parseInt(monthSum) + parseInt(yearSum);
+    console.log(p1, ageOfP1);
+    console.log(p2, ageOfP2);
+    console.log(p3, ageOfP3);
+    console.log(p4);
+
+    for(let i = yearInt; i < yearInt + 101; i++) {
+        let pinnacleValue = undefined;
+        if(i - yearInt + 1 <= ageOfP1) {
+            pinnacleValue = p1;
+        } else if(i - yearInt + 1 <= ageOfP2) {
+            pinnacleValue = p2;
+        } else if(i - yearInt + 1 <= ageOfP3) {
+            pinnacleValue = p3;
+        } else {
+            pinnacleValue = p4;
+        }
         let tempObj = {
             age: {
                 value: i - year + 1
@@ -114,7 +139,7 @@ function createYearlyResult(fullName, dateOfBirth) {
                 value: (i - year) % 7
             },
             pinnacle: {
-                value: (i - year) % 7
+                value: pinnacleValue
             }
         };
         result.push(tempObj);
