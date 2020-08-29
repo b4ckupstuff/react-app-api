@@ -1,4 +1,5 @@
 function reduceToSum(number) {
+    number = number.toString();
     let set = new Set(["11", "22", "33"]);
     if(set.has(number) || number < 10) {
         return number;
