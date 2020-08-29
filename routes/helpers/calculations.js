@@ -1,3 +1,31 @@
+function reduceToSum(number) {
+    let set = new Set(["11", "22", "33"]);
+    if(set.has(number) || number < 10) {
+        return number;
+    }
+    let result = 0;
+    number.split("").map(e => result += parseInt(e));
+    return reduceToSum(result.toString());
+}
+
+function calculateExpressionAndSoulUrgeResult(name) {
+    let map = {"a":1,"b":2,"c":3,"d":4,"e":5,"f":6,"g":7,"h":8,"i":9,"j":1,"k":2,"l":3,"m":4,"n":5,"o":6,"p":7,"q":8,"r":9,"s":1,"t":2,"u":3,"v":4,"w":5,"x":6,"y":7,"z":8," ":0};
+    let vowels = new Set(['a', 'e', 'i', 'o', 'u']);
+    let letters = name.split("");
+    let result = {
+        expression: 0,
+        souldUrge: 0
+    };
+    letters.map(e => {
+        e = e.toLowerCase();
+       result.expression += map[e];
+       result.souldUrge += (vowels.has(e)) ? map[e] : 0;
+    });
+    result.expression = reduceToSum(result.expression.toString());
+    result.souldUrge = reduceToSum(result.souldUrge.toString());
+    return result;
+}
+
 function createCoreResult(fullName, dateOfBirth) {
     let result = {
         dateOfBirth: {},
@@ -7,15 +35,13 @@ function createCoreResult(fullName, dateOfBirth) {
     };
     let dateOfBirthArr = dateOfBirth.split("-");
     let year = dateOfBirthArr[0], month = dateOfBirthArr[1], day = dateOfBirthArr[2];
-    let yearSum = 0, monthSum = 0, daySum = 0;
-    year.split("").map(e => yearSum += parseInt(e));
-    month.split("").map(e => monthSum += parseInt(e));
-    day.split("").map(e => daySum += parseInt(e));
+    let yearSum = reduceToSum(year), monthSum = reduceToSum(month), daySum = reduceToSum(day);
     result.dateOfBirth.value = yearSum;
-    result.lifePath.value = yearSum + monthSum + daySum;
-    result.expression.value = "11/2";
+    result.lifePath.value = reduceToSum(yearSum + monthSum + daySum);
+    let resObj = calculateExpressionAndSoulUrgeResult(fullName);
+    result.expression.value = resObj.expression;
     result.expression.class = "text-warning";
-    result.soulUrge.value = "6";
+    result.soulUrge.value = resObj.souldUrge;
     return result;
 }
 
