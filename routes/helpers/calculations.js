@@ -1,20 +1,7 @@
 function reduceToSum(number) {
     number = number.toString();
-    if(number.includes("/")) {
-        return number;
-    }
     let set = new Set(["11", "22", "33"]);
-    if(set.has(number)) {
-        switch(number) {
-            case "11":
-                return "11/2";
-            case "22":
-                return "22/4";
-            case "33":
-                return "33/6";
-        }
-    }
-    if(number < 10) {
+    if(set.has(number) || number < 10) {
         return number;
     }
     let result = 0;
@@ -43,6 +30,43 @@ function calculateExpressionAndSoulUrgeResult(name) {
     result.expression = reduceToSum(result.expression);
     result.soulUrge = reduceToSum(result.soulUrge);
     return result;
+}
+
+function checkExceptionCases(obj) {
+    let keys = Object.keys(obj);
+    keys.map(e => {
+        switch(obj[e].value) {
+            case "11":
+                obj[e].value = "11/2";
+                obj[e].class = "text-warning";
+                break;
+            case "22":
+                obj[e].value = "22/4";
+                obj[e].class = "text-warning";
+                break;
+            case "33":
+                obj[e].value = "33/6";
+                obj[e].class = "text-warning";
+                break;
+            case "13":
+                obj[e].value = "13/4";
+                obj[e].class = "text-danger";
+                break;
+            case "14":
+                obj[e].value = "14/5";
+                obj[e].class = "text-danger";
+                break;
+            case "16":
+                obj[e].value = "16/7";
+                obj[e].class = "text-danger";
+                break;
+            case "19":
+                obj[e].value = "19/2";
+                obj[e].class = "text-danger";
+                break;
+        }
+    });
+    return obj;
 }
 
 function createCoreResult(fullName, dateOfBirth) {
@@ -82,8 +106,8 @@ function createChallengeResult(fullName, dateOfBirth) {
         third: {},
         fourth: {}
     };
-    result.first.value = "7";
-    result.second.value = "2";
+    result.first.value = "13";
+    result.second.value = "22";
     result.third.value = "5";
     result.fourth.value = "5";
     return result;
@@ -178,8 +202,8 @@ function createYearlyResult(fullName, dateOfBirth) {
 function createFullResult(fullName, dateOfBirth) {
     createYearlyResult(fullName, dateOfBirth);
     return {
-        core: createCoreResult(fullName, dateOfBirth),
-        challenge: createChallengeResult(fullName, dateOfBirth),
+        core: checkExceptionCases(createCoreResult(fullName, dateOfBirth)),
+        challenge: checkExceptionCases(createChallengeResult(fullName, dateOfBirth)),
         important: createImportantResult(fullName, dateOfBirth),
         intensity: createIntensityResult(fullName, dateOfBirth),
         yearly: createYearlyResult(fullName, dateOfBirth)
