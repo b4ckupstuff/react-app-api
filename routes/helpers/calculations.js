@@ -100,17 +100,24 @@ function createCoreResult(fullName, dateOfBirth) {
 }
 
 function createChallengeResult(fullName, dateOfBirth) {
+    let dateOfBirthArr = dateOfBirth.split("-");
+    let year = (dateOfBirthArr[0]), month = (dateOfBirthArr[1]), day = (dateOfBirthArr[2]);
+    let yearSum = reduceToSum(year), monthSum = reduceToSum(month), daySum = reduceToSum(day);
+    let c1 = reduceToSum(parseInt(daySum) - parseInt(monthSum));
+    let c2 = reduceToSum(parseInt(daySum) - parseInt(yearSum));
+    let c3 = reduceToSum(c1 - c2);
+    let c4 = parseInt(monthSum) - parseInt(yearSum);
     let result = {
         first: {},
         second: {},
         third: {},
         fourth: {}
     };
-    result.first.value = "13";
-    result.second.value = "22";
-    result.third.value = "5";
-    result.fourth.value = "5";
-    return result;
+    result.first.value = Math.abs(parseInt(c1));
+    result.second.value = Math.abs(parseInt(c2));
+    result.third.value = Math.abs(parseInt(c3));
+    result.fourth.value = Math.abs(c4);
+    return checkExceptionCases(result);
 }
 
 function createImportantResult(fullName, dateOfBirth) {
@@ -203,7 +210,7 @@ function createFullResult(fullName, dateOfBirth) {
     createYearlyResult(fullName, dateOfBirth);
     return {
         core: checkExceptionCases(createCoreResult(fullName, dateOfBirth)),
-        challenge: checkExceptionCases(createChallengeResult(fullName, dateOfBirth)),
+        challenge: createChallengeResult(fullName, dateOfBirth),
         important: createImportantResult(fullName, dateOfBirth),
         intensity: createIntensityResult(fullName, dateOfBirth),
         yearly: createYearlyResult(fullName, dateOfBirth)
