@@ -1,3 +1,5 @@
+let map = {"a":1,"b":2,"c":3,"d":4,"e":5,"f":6,"g":7,"h":8,"i":9,"j":1,"k":2,"l":3,"m":4,"n":5,"o":6,"p":7,"q":8,"r":9,"s":1,"t":2,"u":3,"v":4,"w":5,"x":6,"y":7,"z":8," ":0};
+
 function reduceToSum(number) {
     number = number.toString();
     let set = new Set(["11", "22", "33"]);
@@ -12,7 +14,6 @@ function reduceToSum(number) {
 function calculateExpressionAndSoulUrgeResult(name) {
     name = name.trim();
     let nameArr = name.split(" ");
-    let map = {"a":1,"b":2,"c":3,"d":4,"e":5,"f":6,"g":7,"h":8,"i":9,"j":1,"k":2,"l":3,"m":4,"n":5,"o":6,"p":7,"q":8,"r":9,"s":1,"t":2,"u":3,"v":4,"w":5,"x":6,"y":7,"z":8," ":0};
     let vowels = new Set(['a', 'e', 'i', 'o', 'u']);
     let result = {
         expression: 0,
@@ -121,6 +122,7 @@ function createChallengeResult(fullName, dateOfBirth) {
 }
 
 function createImportantResult(fullName, dateOfBirth) {
+    let nameArr = fullName.split(" ");
     let result = {
         personality: {},
         maturity: {},
@@ -130,9 +132,19 @@ function createImportantResult(fullName, dateOfBirth) {
         firstLetter: {},
         firstVowel: {}
     };
+    let dateOfBirthArr = dateOfBirth.split("-");
+    let year = dateOfBirthArr[0], month = dateOfBirthArr[1], day = dateOfBirthArr[2];
+    let yearSum = reduceToSum(year), monthSum = reduceToSum(month), daySum = reduceToSum(day);
     result.personality.value = "5";
-    result.maturity.value = "5";
-    result.growth.value = "5";
+    let lifePath = reduceToSum(yearSum + monthSum + daySum);
+    let expression = calculateExpressionAndSoulUrgeResult(fullName).expression;
+    result.maturity.value = reduceToSum(parseInt(lifePath) + parseInt(expression));
+    result.growth.value = 0;
+    nameArr[0].split("").map(e => {
+        e = e.toLowerCase();
+        result.growth.value += map[e];
+    });
+    result.growth.value = reduceToSum(result.growth.value);
     result.effectiveness.value = "5";
     result.karmic.value = "5";
     result.firstLetter.value = "B (2)";
