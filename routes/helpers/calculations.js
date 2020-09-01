@@ -1,7 +1,20 @@
 function reduceToSum(number) {
     number = number.toString();
+    if(number.includes("/")) {
+        return number;
+    }
     let set = new Set(["11", "22", "33"]);
-    if(set.has(number) || number < 10) {
+    if(set.has(number)) {
+        switch(number) {
+            case "11":
+                return "11/2";
+            case "22":
+                return "22/4";
+            case "33":
+                return "33/6";
+        }
+    }
+    if(number < 10) {
         return number;
     }
     let result = 0;
@@ -43,11 +56,22 @@ function createCoreResult(fullName, dateOfBirth) {
     let year = dateOfBirthArr[0], month = dateOfBirthArr[1], day = dateOfBirthArr[2];
     let yearSum = reduceToSum(year), monthSum = reduceToSum(month), daySum = reduceToSum(day);
     result.dateOfBirth.value = daySum;
+    if(daySum.includes("/")) {
+        result.dateOfBirth.class = "text-warning";
+    }
     result.lifePath.value = reduceToSum(yearSum + monthSum + daySum);
+    if(result.lifePath.value.includes("/")) {
+        result.lifePath.class = "text-warning";
+    }
     let resObj = calculateExpressionAndSoulUrgeResult(fullName);
     result.expression.value = resObj.expression;
-    result.expression.class = "text-warning";
+    if(resObj.expression.includes("/")) {
+        result.expression.class = "text-warning";
+    }
     result.soulUrge.value = resObj.soulUrge;
+    if(resObj.soulUrge.includes("/")) {
+        result.soulUrge.class = "text-warning";
+    }
     return result;
 }
 
