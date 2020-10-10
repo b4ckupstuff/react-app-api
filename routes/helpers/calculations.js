@@ -183,6 +183,45 @@ function createIntensityResult(fullName, dateOfBirth) {
     return result;
 }
 
+function calculatePeriodAge(lifePath) {
+    let periodOneAge = undefined, periodTwoAge = undefined;
+    switch (lifePath) {
+        case 1:
+            periodOneAge = 26; periodTwoAge = 53;
+            break;
+        case 2:
+            periodOneAge = 25; periodTwoAge = 52;
+            break;
+        case 3:
+            periodOneAge = 24; periodTwoAge = 51;
+            break;
+        case 4:
+            periodOneAge = 23; periodTwoAge = 59;
+            break;
+        case 5:
+            periodOneAge = 31; periodTwoAge = 58;
+            break;
+        case 6:
+            periodOneAge = 30; periodTwoAge = 57;
+            break;
+        case 7:
+            periodOneAge = 29; periodTwoAge = 56;
+            break;
+        case 8:
+            periodOneAge = 28; periodTwoAge = 55;
+            break;
+        case 9:
+            periodOneAge = 27; periodTwoAge = 54;
+            break;
+        default:
+            break;
+    }
+    return {
+        periodOneAge,
+        periodTwoAge
+    }
+}
+
 function createYearlyResult(fullName, dateOfBirth) {
     let result = [];
     let dateOfBirthArr = dateOfBirth.split("-");
@@ -199,7 +238,9 @@ function createYearlyResult(fullName, dateOfBirth) {
     // console.log(p2, ageOfP2);
     // console.log(p3, ageOfP3);
     // console.log(p4);
+    let yearSumDuplicate = yearSum;
     yearSum = parseInt(yearSum);
+    let { periodOneAge, periodTwoAge } = calculatePeriodAge(lifePath);
 
     for(let i = yearInt; i < yearInt + 101; i++) {
         let pinnacleValue = undefined;
@@ -242,6 +283,13 @@ function createYearlyResult(fullName, dateOfBirth) {
         if(tempObj.universalYear.value === 0) {
             tempObj.universalYear.value = 1;
             yearSum++;
+        }
+        if(i - year < periodOneAge) {
+            tempObj.period.value = daySum;
+        } else if(i - year < periodTwoAge) {
+            tempObj.period.value = monthSum;
+        } else {
+            tempObj.period.value = yearSumDuplicate;
         }
         result.push(tempObj);
     }
