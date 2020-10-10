@@ -135,7 +135,17 @@ function createImportantResult(fullName, dateOfBirth) {
     let dateOfBirthArr = dateOfBirth.split("-");
     let year = dateOfBirthArr[0], month = dateOfBirthArr[1], day = dateOfBirthArr[2];
     let yearSum = reduceToSum(year), monthSum = reduceToSum(month), daySum = reduceToSum(day);
-    result.personality.value = "5";
+    result.personality.value = 0;
+    let vowels = new Set(['a', 'e', 'i', 'o', 'u']);
+    nameArr.map(e => {
+        let letters = e.split("");
+        letters.map(letter => {
+            if(!vowels.has(letter)) {
+                result.personality.value += map[letter];
+            }
+        })
+    });
+    result.personality.value = result.personality.value.toString();
     let lifePath = reduceToSum(yearSum + monthSum + daySum);
     let expression = calculateExpressionAndSoulUrgeResult(fullName).expression;
     result.maturity.value = reduceToSum(parseInt(lifePath) + parseInt(expression));
@@ -145,7 +155,7 @@ function createImportantResult(fullName, dateOfBirth) {
         result.growth.value += map[e];
     });
     result.growth.value = reduceToSum(result.growth.value);
-    result.effectiveness.value = "5";
+    // result.effectiveness.value = "5";
     result.karmic.value = "5";
     result.firstLetter.value = "B (2)";
     result.firstVowel.value = "E (5)";
