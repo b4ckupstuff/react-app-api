@@ -136,16 +136,27 @@ function createImportantResult(fullName, dateOfBirth) {
     let year = dateOfBirthArr[0], month = dateOfBirthArr[1], day = dateOfBirthArr[2];
     let yearSum = reduceToSum(year), monthSum = reduceToSum(month), daySum = reduceToSum(day);
     result.personality.value = 0;
+    result.firstLetter.value = undefined;
+    result.firstVowel.value = undefined;
     let vowels = new Set(['a', 'e', 'i', 'o', 'u']);
+    let setOfNumbersInName = new Set();
     nameArr.map(e => {
         let letters = e.split("");
         letters.map(letter => {
             if(!vowels.has(letter)) {
                 result.personality.value += map[letter];
+                if(!result.firstLetter.value) {
+                    result.firstLetter.value = letter.toUpperCase() + ` (${map[letter]})`;
+                }
+            } else {
+                if(!result.firstVowel.value) {
+                    result.firstVowel.value = letter.toUpperCase() + ` (${map[letter]})`;
+                }
             }
+            setOfNumbersInName.add(map[letter]);
         })
     });
-    result.personality.value = result.personality.value.toString();
+    result.personality.value = reduceToSum(result.personality.value);
     let lifePath = reduceToSum(yearSum + monthSum + daySum);
     let expression = calculateExpressionAndSoulUrgeResult(fullName).expression;
     result.maturity.value = reduceToSum(parseInt(lifePath) + parseInt(expression));
@@ -156,9 +167,9 @@ function createImportantResult(fullName, dateOfBirth) {
     });
     result.growth.value = reduceToSum(result.growth.value);
     // result.effectiveness.value = "5";
-    result.karmic.value = "5";
-    result.firstLetter.value = "B (2)";
-    result.firstVowel.value = "E (5)";
+    result.karmic.value = "";
+    [1,2,3,4,5,6,7,8,9].filter(e => !setOfNumbersInName.has(e)).map(e => result.karmic.value += e + ",");
+    if(result.karmic.value.endsWith(",")) result.karmic.value = result.karmic.value.substr(0, result.karmic.value.length - 1);
     return result;
 }
 
@@ -188,6 +199,7 @@ function createYearlyResult(fullName, dateOfBirth) {
     // console.log(p2, ageOfP2);
     // console.log(p3, ageOfP3);
     // console.log(p4);
+    yearSum = parseInt(yearSum);
 
     for(let i = yearInt; i < yearInt + 101; i++) {
         let pinnacleValue = undefined;
@@ -208,10 +220,10 @@ function createYearlyResult(fullName, dateOfBirth) {
                 value: Math.round(Math.random() * 10)
             },
             personalYear: {
-                value: (i - year) % 10
+                value: (lifePath + (i - year)) % 10
             },
             universalYear: {
-                value: (i - year) % 10
+                value: (yearSum + (i - year)) % 10
             },
             year: {
                 value: i
@@ -223,6 +235,14 @@ function createYearlyResult(fullName, dateOfBirth) {
                 value: pinnacleValue
             }
         };
+        if(tempObj.personalYear.value === 0) {
+            tempObj.personalYear.value = 1;
+            lifePath++;
+        }
+        if(tempObj.universalYear.value === 0) {
+            tempObj.universalYear.value = 1;
+            yearSum++;
+        }
         result.push(tempObj);
     }
     return result;

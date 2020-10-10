@@ -58,7 +58,7 @@ router.get('/adminData/:grandparent/:parent', function (req, res) {
     res.json(temp);
 });
 
-router.post('/bPMAVm', limiter, async function (req, res, next) {
+router.post('/bPMAVm', async function (req, res, next) {
     // process req.body => {fullName, dateOfBirth}
     let response = calculations.createFullResult(req.body.fullName, req.body.dateOfBirth);
     res.json(response);
