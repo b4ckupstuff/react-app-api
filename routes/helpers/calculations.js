@@ -226,7 +226,7 @@ function createYearlyResult(fullName, dateOfBirth) {
     let result = [];
     let dateOfBirthArr = dateOfBirth.split("-");
     // let year = parseInt(dateOfBirthArr[0]), month = parseInt(dateOfBirthArr[1]), day = parseInt(dateOfBirthArr[2]);
-    let year = (dateOfBirthArr[0]), month = (dateOfBirthArr[1]), day = (dateOfBirthArr[2]);
+    let year = (dateOfBirthArr[0]), month = (dateOfBirthArr[1].replace('0', '')), day = (dateOfBirthArr[2]);
     let yearInt = parseInt(year);
     let yearSum = reduceToSum(year), monthSum = reduceToSum(month), daySum = reduceToSum(day);
     let lifePath = parseInt(reduceToSum(yearSum + monthSum + daySum));
